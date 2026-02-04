@@ -1,4 +1,4 @@
-# TrevorC2 – Authorized Lab Usage Guide
+# Command-and-Control(C2) – Authorized Lab Usage Guide
 > ⚠️ **Important Notice**
 >
 > This project is intended **strictly for authorized security research, red‑team labs, malware analysis, and defensive testing.**
