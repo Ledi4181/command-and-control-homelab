@@ -24,10 +24,10 @@ It is designed to help security professionals understand:
 
 ---
 
-## 🖥️ C2 Server Setup (Attacker / Lab Controller)
+## 🖥️ C2 Server Setup (Attacker's Machine)
 
 ### 1️⃣ Clone the Repository
-Initialize the environment by cloning the framework and entering the project directory.
+Initialize the environment by cloning the framework onto the C2 Server machine and entering the project directory.
 
 ```bash
 git clone https://github.com/trustedsec/trevorc2.git
@@ -45,19 +45,32 @@ pip3 install -r requirements.txt
 Start the C2 server to begin monitoring for incoming agent check-ins.
 
 ```bash
-sudo python3 trevorc2_server.py```
+sudo python3 trevorc2_server.py
 ```
 
 ## ⚙️ Agent Configuration & Staging
 
 ### 1️⃣ Configure Callback Parameters
-Modify the agent script to point to your Lab Controller's IP address.
+Modify the agent script to point to your C2 Server machine's IP address.
 
 ```bash
 cd agents
 ```
 
 # Edit the $SITE_URL variable in the relevant agent file:
+
+## 🔧 Agent Configuration
+The agent must be configured with the C2 Server machine's IP address before deployment.
+
+Navigate to the agents folder: ```cd agents/```
+
+Open the relevant agent file:
+
+Windows: ```trevorc2_client.ps1```
+
+Linux: ```trevorc2_client.py```
+
+Locate the **Site_URL** variable and set it to your server's IP.
 
 ```bash
 vim trevorc2_client.py 
