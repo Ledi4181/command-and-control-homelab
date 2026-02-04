@@ -48,38 +48,25 @@ Start the C2 server to begin monitoring for incoming agent check-ins.
 sudo python3 trevorc2_server.py
 ```
 
-## ⚙️ Agent Configuration & Staging
-
-### 1️⃣ Configure Callback Parameters
-Modify the agent script to point to your C2 Server machine's IP address.
+### 4️⃣ Agent Configuration & Staging
+Modify the agent script **$SITE_URL** variable to point to your C2 Server machine's IP address.
 
 ```bash
 cd agents
 ```
 
-# Edit the $SITE_URL variable in the relevant agent file:
-
-## 🔧 Agent Configuration
-The agent must be configured with the C2 Server machine's IP address before deployment.
-
-Navigate to the agents folder: ```cd agents/```
-
-Open the relevant agent file:
+# Open the relevant agent file:
 
 Windows: ```trevorc2_client.ps1```
 
 Linux: ```trevorc2_client.py```
 
-Locate the **Site_URL** variable and set it to your server's IP.
+Locate the **Site_URL** variable and set it to your C2 Server machine's IP address (i.e. http://xx.xx.xx.xx).
 
-```bash
-vim trevorc2_client.py 
-```
-
-### 2️⃣ Host the Payload
+### 5️⃣ Host the Payload
 Start a temporary listener to deliver the agent to the target system.
 
-# Run from within the /agents directory
+Run from within the ```/agents``` directory
 ```bash
 python3 -m http.server 8000
 ```
