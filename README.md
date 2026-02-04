@@ -37,13 +37,13 @@ cd trevorc2
 Ensure python3 and pip3 are installed, then pull the required libraries.
 
 ```bash
-pip3 install -r requirements.txt
+pip3 install -r requirements.txt```
 
 ### 3️⃣ Initialize Listener
 Start the C2 server to begin monitoring for incoming agent check-ins.
 
 ```bash
-sudo python3 trevorc2_server.py
+sudo python3 trevorc2_server.py```
 
 ## ⚙️ Agent Configuration & Staging
 
